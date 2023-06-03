@@ -36,7 +36,8 @@ typedef struct graphical_command {
 
 static const graphical_command_t GRAPHICAL_COMMANDS[] = {
         { GRAPHICAL_MAP_SIZE, &msz_handler },
-        { GRAPHICAL_TEAM_NAME, &tna_handler}
+        { GRAPHICAL_TEAM_NAME, &tna_handler },
+        { GRAPHICAL_PLAYER_LEVEL, &plv_handler },
 };
 
 #endif

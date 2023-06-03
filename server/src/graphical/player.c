@@ -12,9 +12,10 @@
 void plv_handler(server_t *server, client_t *client, char *line)
 {
     (void) line;
+    (void) server;
     int player_nbr = 0; // getID(client->fd)
-    int level = 0; // client->player->info->level
+    size_t level = 0; // client->player->info->level
 
-    append_buffer(client->buffer, "%s %i %i%s", GRAPHICAL_PLAYER_LEVEL, \
+    append_buffer(client->buffer, "%s %i %lu%s", GRAPHICAL_PLAYER_LEVEL, \
         player_nbr, level, LINE_BREAK);
 }
