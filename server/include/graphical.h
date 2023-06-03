@@ -15,6 +15,7 @@
 
     #define GRAPHICAL_MAP_SIZE "msz"
     #define GRAPHICAL_TEAM_NAME "tna"
+    #define GRAPHICAL_PLAYER_LEVEL "plv"
     #define GRAPHICAL_UNKNOWN "suc"
 
     #include "types.h"
@@ -23,6 +24,7 @@ void handle_graphical_command(server_t *server, client_t *client, char *line);
 
 void msz_handler(server_t *server, client_t *client, char *line);
 void tna_handler(server_t *server, client_t *client, char *line);
+void plv_handler(server_t *server, client_t *client, char *line);
 
 typedef void (graphical_handler_t) \
     (server_t *server, client_t *client, char *line);
