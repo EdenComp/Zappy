@@ -11,8 +11,9 @@ SRC			=	src/core/fdsets.c \
 				src/core/loop.c \
 				src/core/tick.c \
 				src/graphical/command.c \
-				src/graphical/map_answers.c \
-				src/graphical/team_name_answers.c \
+				src/graphical/map.c \
+				src/graphical/team_name.c \
+				src/graphical/player.c \
 				src/objects/clients.c \
 				src/objects/players.c \
 				src/objects/teams.c \
