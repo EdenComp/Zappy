@@ -27,6 +27,8 @@ static void init_tiles(server_t *server)
 
 void free_map(server_t *server)
 {
+    if (server->zappy->map == NULL)
+        return;
     for (int i = 0; i < server->options->height; i++) {
         free(server->zappy->map[i]);
     }
