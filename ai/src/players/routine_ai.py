@@ -1,4 +1,5 @@
-from ai.src.player import Player, EnumDirection, EnumObject, look_item
+from ai.src.player import Player, EnumDirection, EnumObject, EnumHeader
+from ai.src.players.routine_boss import look_item
 
 def first_pattern_ai(list_item: list, player: Player):
     player.move()

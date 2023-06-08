@@ -6,20 +6,6 @@ from ai.src.player import Player, EnumObject
 from ai.src.players.routine_ai import routine_ai
 from ai.src.players.routine_boss import routine_boss
 
-def look_item(player : Player):
-    str: str = player.look()
-    str = str.replace("[ ", "")
-    str = str.replace(", ]", ", V,")
-    str = str.replace(" ]", "")
-    for i in range(0, 10):
-        str = str.replace(",,", ", V,")
-    list : list = str.split(", ")
-    list_tmp = []
-    for i in list:
-        list_tmp.append(i.split(" "))
-    foot_case = list_tmp.pop(0)
-    return list_tmp[:3], foot_case
-
 def dump_item(player: Player):
     inventory = player.inventory()
     for i in range(1, len(inventory)):

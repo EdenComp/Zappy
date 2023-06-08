@@ -1,4 +1,18 @@
-from ai.src.player import Player, EnumDirection, EnumObject, look_item
+from ai.src.player import Player, EnumDirection, EnumObject
+
+def look_item(player : Player):
+    str: str = player.look()
+    str = str.replace("[ ", "")
+    str = str.replace(", ]", ", V,")
+    str = str.replace(" ]", "")
+    for i in range(0, 10):
+        str = str.replace(",,", ", V,")
+    list : list = str.split(", ")
+    list_tmp = []
+    for i in list:
+        list_tmp.append(i.split(" "))
+    foot_case = list_tmp.pop(0)
+    return list_tmp[:3], foot_case
 
 def first_pattern(list_item : list, player: Player, direction: EnumDirection):
     player.move()
