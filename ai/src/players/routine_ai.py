@@ -43,6 +43,14 @@ def look_aroud_ai(player: Player):
     list_item.insert(0, list_item.pop())
     return list_item, foot_case
 
+def return_to_boss(player: Player):
+    player.turn(EnumDirection.LEFT)
+    player.move()
+    player.turn(EnumDirection.RIGHT)
+    player.move()
+    player.move()
+    # par la suite verifier que cela n'a pas fail car il ne peux pas y avoir plus de 10 commands a gerer en meme temps cote serv
+
 def routine_ai(player: Player):
     list_item, foot_case = look_aroud_ai(player)
     for i in foot_case:
@@ -53,4 +61,5 @@ def routine_ai(player: Player):
     print(player.inventory())
     first_pattern_ai(list_item, player)
     second_pattern_ai(list_item[2:], player)
+    return_to_boss(player)
     print(player.inventory())
