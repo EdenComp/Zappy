@@ -14,7 +14,7 @@ void Raylibcpp::RayModel::drawModel(Model mod, Vector3 pos, float scale, Color c
 
 ModelAnimation *Raylibcpp::RayModel::loadModelAnimations(const char *fileName, unsigned int *animCount)
 {
-    ModelAnimation * anim = LoadModelAnimations(fileName, animCount);
+    ModelAnimation * anim = LoadModelAnimations(fileName, (int *)animCount);
 
     if (anim == NULL)
         throw Error("Error: Cannot load model animations");
